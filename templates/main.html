@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="static/main.css">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Главная страница</title>
+        <script src="https://maps.api.2gis.ru/2.0/loader.js?pkg=full"></script>
+        <link rel="apple-touch-icon" sizes="180x180" href="static/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="static/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="static/favicon-16x16.png">
+        <link rel="manifest" href="static/site.webmanifest">
+    </head>
+
+    <body>
+        <script type="text/javascript">
+            var map;
+
+            DG.then(function () {
+                map = DG.map('map', {
+                    center: [53.629959, 55.934464],
+                    zoom: 20
+                });
+
+                DG.marker([53.629959, 55.934464]).addTo(map).bindPopup('Вы кликнули по мне!');
+            });
+        </script>
+        <header class="header">
+            <div class="container">
+                <nav>
+                    <a class="btn" href="#about">О РЕСТОРАНЕ</a>
+                    <a class="btn" href="#ours">КОМАНДА</a>
+                    <a class="btn" href="#zak">ЗАКАЗАТЬ</a>
+                </nav>
+
+                <img src="static/images/logo.jpeg" alt="">
+
+                <nav>
+                    <a class="btn" href="#menu">МЕНЮ</a>
+                    <a class="btn" href="#">МЕРОПРИЯТИЯ</a>
+                    <a class="btn" href="#con">КОНТАКТЫ</a>
+                </nav>
+            </div>
+        </header>
+
+        <main>
+
+            <section class="welcome">
+                <div class="container">
+                    <div class="list-icons">
+                        <a href="#!">
+                            <img src="static/images/facebook.png" alt="">
+                        </a>
+                        <a href="#!">
+                            <img src="static/images/twitter.png" alt="">
+                        </a>
+                        <a href="#!">
+                            <img src="static/images/instagram.png" alt="">
+                        </a>
+                    </div>
+
+                    <div class="welcome-block">
+                        <h1 class="welcome-subtitle">РЕСТОРАН</h1>
+                        <h1 class="welcome-title">GOLDEN EGG</h1>
+
+                        <div class="list-btns">
+                            <div class="btn btn-order">
+                                <a href="#zak">ЗАКАЗАТЬ СТОЛИК</a>
+                            </div>
+                            <div class="btn btn-about">
+                                <a href="#about">О РЕСТОРАНЕ</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="list-icons">
+                        <a href="#!">
+                            <img src="static/images/facebook.png" alt="">
+                        </a>
+                        <a href="#!">
+                            <img src="static/images/twitter.png" alt="">
+                        </a>
+                        <a href="#!">
+                            <img src="static/images/instagram.png" alt="">
+                        </a>
+                    </div>
+                </div>
+            </section>
+
+            <section class="about">
+                <div class="container">
+                    <div class="about-text" id="about">
+                        <h1 class="about-title">О РЕСТОРАНЕ</h1>
+
+                        <p class="about-desc">
+                            <b>
+                                Волшебная атмосфера, безукоризненное обслуживание, изысканный интерьер и, самое главное, богатейший выбор вкуснейших блюд отменного качества – именно эти характеристики привлекают гостей в наш ресторан
+                            </b>
+                        </p>
+
+                        <p class="about-desc">
+                            Официанты этого заведения знают все тонкости приготовления блюд, они подскажут гостям наиболее подходящие для них яства. Тут хорошо знают постоянных клиентов, умело угождая их вкусам.
+                        </p>
+
+                        <p class="about-desc">
+                            Идеально дополняет ресторан уютная кофейня, находящаяся на первом этаже. Чашечка изумительного кофе и сладости от местного кондитера зарядят вас бодростью и позитивной энергией.
+                        </p>
+                    </div>
+
+                    <img src="static/images/image-about.png" alt="">
+                </div>
+            </section>
+
+            <section id="ours" class="team">
+                <img src="static/images/image-team.png" alt="">
+
+            </section>
+
+        </main>
+        <div class="zak" id="zak">
+
+            <h1 class="zak-title">ЗАКАЗАТЬ СТОЛИК</h1>
+            <div class="abim">
+                <img src="static/images/about-img1.jpg" alt="">
+            </div>
+            <div class="form">
+    <form action="/submit" method="POST">
+        <input name="name" class="inp" id="name" type="text" placeholder="имя" required><br><br>
+        <input name="email" class="inp" id="email" type="text" placeholder="email" required><br><br>
+        <input name="number" class="inp" id="number" type="text" placeholder="телефон" required><br><br>
+        <input name="people" class="inp" id="people" type="text" placeholder="кол-во людей" required><br><br>
+        <input name="date" class="inp" id="date" type="text" placeholder="Дата(дата/месяц)" required><br><br>
+        <input name="clock" class="inp" id="clock" type="text" placeholder="время" required><br><br>
+        <input class="formbtn" type="submit" value="Оформить заказ">
+    </form>
+</div>
+
+        </div>
+        <div class="men" id="menu">
+
+        </div>
+
+        <div class="men1">
+
+        </div>
+
+        <div class="prazd">
+
+        </div>
+
+        <div class="cont" id="con">
+            <h1>Контакты</h1>
+            <h4>Худайбердина, 122а, Стерлитамак</h4>
+            <h4>+8 800 555 3535</h4>
+            <h4>info@goldenegg.com</h4>
+        </div>
+
+
+        <div id="map" style="width:1500px; height:400px"></div>
+
+        <footer>
+
+        </footer>
+    </body>
+</html>
